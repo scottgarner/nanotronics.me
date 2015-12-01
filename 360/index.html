@@ -85,10 +85,11 @@
       
       var material  = new THREE.MeshBasicMaterial();
       material.side = THREE.BackSide;
-      material.map    = loader.load('textures/sphere.png')
+      material.map    = loader.load('textures/sphere.jpg')
 
-      var earthMesh = new THREE.Mesh(geometry, material);
-      scene.add(earthMesh);
+      var skyMesh = new THREE.Mesh(geometry, material);
+      skyMesh.rotateY(Math.PI/-2);
+      scene.add(skyMesh);
       
       //
 
